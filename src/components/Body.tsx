@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import Header from './Header'
 import ProductCard from './ProductCard';
 
 const Body = () => {
@@ -22,41 +21,37 @@ const Body = () => {
     }
 
     return (
-        <>
-            {/* <Header /> */}
-            <div className='container'>
 
-                <button
-                    className='btn btn-success my-3'
-                    onClick={() => {
-                        if (buttonName == "Top Rated Products") {
-                            setButtonName("All Products");
-                            const filteredProductList = listOfProducts.filter(
-                                (product) =>
-                                    product.rating.rate > 4
-                            )
-                            setFilteredProductList(filteredProductList);
-                        } else {
-                            setButtonName("Top Rated Products");
-                            const filteredProductList = setFilteredProductList(listOfProducts);
-                        }
-                    }}
-                >
-                    {buttonName}
-                </button>
+        <div className='container'>
 
-                <div className="row">
-
-                    {
-                        filteredProductList.map((product) => (
-                            <ProductCard key={product.id} productData={product} />
-                        ))
+            <button
+                className='btn btn-success my-3'
+                onClick={() => {
+                    if (buttonName == "Top Rated Products") {
+                        setButtonName("All Products");
+                        const filteredProductList = listOfProducts.filter(
+                            (product) =>
+                                product.rating.rate > 4
+                        )
+                        setFilteredProductList(filteredProductList);
+                    } else {
+                        setButtonName("Top Rated Products");
+                        const filteredProductList = setFilteredProductList(listOfProducts);
                     }
+                }}
+            >
+                {buttonName}
+            </button>
 
-                </div>
-            </div >
-        </>
+            <div className="row">
+                {
+                    filteredProductList.map((product) => (
+                        <ProductCard key={product.id} productData={product} />
+                    ))
+                }
+            </div>
+        </div >
     )
 }
 
-export default Body
+export default Body;
