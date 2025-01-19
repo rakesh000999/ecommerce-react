@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ProductCard from './ProductCard';
+import Shimmer from './Shimmer';
 
 const Body = () => {
 
@@ -20,8 +21,9 @@ const Body = () => {
         setFilteredProductList(json);
     }
 
-    return (
-
+    return filteredProductList.length === 0 ? (
+        <Shimmer />
+    ) : (
         <div className='container'>
 
             <button

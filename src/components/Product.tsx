@@ -10,6 +10,7 @@ const Product = () => {
     console.log(productInfo);
 
     return (
+        
         <div className='container'>
             <div className='row my-3'>
                 <div className='col-12 col-md-6 d-flex justify-content-center'>
