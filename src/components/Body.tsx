@@ -15,7 +15,7 @@ const Body = () => {
 
     useEffect(() => {
         if (searchText === "") {
-            setFilteredProductList(listOfProducts);  // Reset filter if search text is empty
+            setFilteredProductList(listOfProducts);
         } else {
             const filteredProducts = listOfProducts.filter((product) =>
                 product.title.toLowerCase().includes(searchText.toLowerCase())

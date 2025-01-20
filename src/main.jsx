@@ -6,6 +6,7 @@ import Body from './components/Body.tsx'
 import Contact from './components/Contact.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Product from './components/Product.tsx'
+import Cart from './components/Cart.tsx'
 
 
 const appRounter = createBrowserRouter([
@@ -24,6 +25,10 @@ const appRounter = createBrowserRouter([
       {
         path: "/product/:pdctId",
         element: <Product />
+      },
+      {
+        path: "/cart",
+        element: <Cart />
       }
     ]
   }

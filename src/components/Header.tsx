@@ -1,7 +1,11 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
+
+    const cartItems = useSelector((store) => store?.cart?.items);
+
     return (
         <>
             <nav
@@ -50,22 +54,19 @@ const Header = () => {
                                 </div>
                             </li>
                         </ul>
-                        <form className="d-flex my-2 my-lg-0">
-                            <input
-                                className="form-control me-sm-2"
-                                type="text"
-                                placeholder="Search"
-                            />
-                            <button
-                                className="btn btn-outline-success my-2 my-sm-0"
-                                type="submit"
-                            >
-                                Search
-                            </button>
-                        </form>
+                        <div className="d-flex my-2 my-lg-0">
+
+                            <Link to={"/cart"}>
+                                <button
+                                    className='btn btn-primary fw-bold'
+                                >
+                                    Cart: <span className='bg-warning text-black px-2 rounded'> {cartItems.length}</span>
+                                </button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
-            </nav>
+            </nav >
 
         </>
     )
