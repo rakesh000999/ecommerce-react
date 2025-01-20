@@ -30,9 +30,9 @@ const CartItem = ({ item }) => {
             <p>Price: ${item.price}</p>
             <p>Quantity: {item.quantity}</p>
             <p>Total Price: ${totalPrice}</p>
-            <button onClick={handleIncrement}>+</button>
-            <button onClick={handleDecrement}>-</button>
-            <button onClick={handleRemove}>Remove</button>
+            <button className='btn btn-sm btn-info mx-2' onClick={handleIncrement}>+</button>
+            <button className='btn btn-sm btn-success mx-2' onClick={handleDecrement}>-</button>
+            <button className='btn btn-danger btn-sm mx-2' onClick={handleRemove}>Remove</button>
         </div>
     );
 };
