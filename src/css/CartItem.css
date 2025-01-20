@@ -1,0 +1,37 @@
+.cart-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.cart-item img {
+    object-fit: contain;
+    width: 100px; /* Adjust the width to make the image smaller */
+    height: 100px; /* Adjust the height to make the image smaller */
+    border-radius: 5px;
+}
+
+.cart-item .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart-item .btn {
+    min-width: 40px;
+    text-align: center;
+}
+
+.cart-item .item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 15px;
+}
+
+.cart-item .item-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}

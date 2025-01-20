@@ -49,7 +49,7 @@ const Body = () => {
             <div className='d-flex justify-content-between align-items-center'>
                 <div>
                     <button
-                        className='btn btn-success my-3'
+                        className='btn btn-sm btn-success my-3'
                         onClick={filterProduct}
                     >
                         {buttonName}

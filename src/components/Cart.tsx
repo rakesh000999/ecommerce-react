@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import CartItem from './CartItem'; 
+import CartItem from './CartItem';
 
 const Cart = () => {
     const cartItems = useSelector((store) => store.cart.items);
@@ -10,6 +10,9 @@ const Cart = () => {
     return (
         <div className='container'>
             <h2 className='text-center'>Your Cart</h2>
+            <div className='total-price'>
+                <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
+            </div>
             {cartItems.length === 0 ? (
                 <p className='text-center'>Your cart is empty</p>
             ) : (
@@ -17,9 +20,7 @@ const Cart = () => {
                     {cartItems.map((item, index) => (
                         <CartItem key={index} item={item} />
                     ))}
-                    <div className='total-price'>
-                        <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
-                    </div>
+
                 </div>
             )}
         </div>
