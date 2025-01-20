@@ -10,13 +10,14 @@ const Cart = () => {
     return (
         <div className='container'>
             <h2 className='text-center'>Your Cart</h2>
-            <div className='total-price'>
-                <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
-            </div>
+
             {cartItems.length === 0 ? (
                 <p className='text-center'>Your cart is empty</p>
             ) : (
                 <div className='cart-items'>
+                    <div className='total-price'>
+                        <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
+                    </div>
                     {cartItems.map((item, index) => (
                         <CartItem key={index} item={item} />
                     ))}
